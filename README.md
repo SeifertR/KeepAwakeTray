@@ -1,0 +1,1 @@
+Coffee cup icons made by [Freepik](http://www.freepik.com) from https://www.flaticon.com/ is licenced by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)
