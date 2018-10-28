@@ -1,4 +1,5 @@
 ﻿using Hardcodet.Wpf.TaskbarNotification;
+using KeepAwakeTray.Interfaces;
 using System;
 using System.Reflection;
 using System.Threading;
@@ -11,9 +12,11 @@ namespace KeepAwakeTray
     /// </summary>
     public partial class App : Application
     {
+        private readonly CompositionManager container = new CompositionManager();
+
         private Mutex singleInstanceMutex;
-        private AppManager appManager;
         private TaskbarIcon notifyIcon;
+        private IAppManager appManager;
 
         public App()
         {
@@ -31,13 +34,11 @@ namespace KeepAwakeTray
         {
             base.OnStartup(e);
 
-            appManager = new AppManager();
+            appManager = container.Resolve<IAppManager>();
             notifyIcon = (TaskbarIcon)FindResource("TheNotifyIcon");
 
             if (notifyIcon != null)
                 notifyIcon.DataContext = appManager;
-
-            appManager.Start();
         }
 
         protected override void OnExit(ExitEventArgs e)

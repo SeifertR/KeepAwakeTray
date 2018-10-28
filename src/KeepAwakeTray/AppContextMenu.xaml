@@ -2,7 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ContextMenu x:Shared="False" x:Key="AppContextMenu">
-        <MenuItem Header="Exit" Command="{Binding ExitCommand}"></MenuItem>
+        <MenuItem Header="Activate" Command="{Binding ActivateCommand}"/>
+        <MenuItem Header="Deactivate" Command="{Binding DeactivateCommand}"/>
+        <MenuItem Header="Settings" Command="{Binding ShowSettingsCommand}"/>
+        <MenuItem Header="Exit" Command="{Binding ExitCommand}"/>
     </ContextMenu>
     
 </ResourceDictionary>
