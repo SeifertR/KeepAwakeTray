@@ -3,7 +3,7 @@ using KeepAwakeTray.Interfaces;
 using Unity;
 using Unity.ServiceLocation;
 
-namespace KeepAwakeTray
+namespace KeepAwakeTray.Managers
 {
     public class CompositionManager
     {

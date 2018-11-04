@@ -6,8 +6,8 @@
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="AppContextMenu.xaml"/>
-                <ResourceDictionary Source="AppNotifyIcon.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/AppContextMenu.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/AppNotifyIcon.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

@@ -103,11 +103,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SettingsManager.cs" />
+    <Compile Include="Converters\ActivationConverter.cs" />
+    <Compile Include="Managers\SettingsManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppManager.cs" />
-    <Compile Include="CompositionManager.cs" />
+    <Compile Include="Managers\AppManager.cs" />
+    <Compile Include="Managers\CompositionManager.cs" />
     <Compile Include="Interfaces\IActivityMonitor.cs" />
     <Compile Include="Interfaces\IAppManager.cs" />
     <Compile Include="Interfaces\ISettingsManager.cs" />
@@ -138,11 +139,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AppContextMenu.xaml">
+    <Page Include="ResourceDictionaries\AppContextMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AppNotifyIcon.xaml">
+    <Page Include="ResourceDictionaries\AppNotifyIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,5 +158,9 @@
     <Resource Include="Images\coffee-cup-yellow.ico" />
     <Resource Include="Images\coffee-cup-yellow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

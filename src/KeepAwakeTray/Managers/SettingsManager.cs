@@ -1,6 +1,6 @@
 ﻿using KeepAwakeTray.Interfaces;
 
-namespace KeepAwakeTray
+namespace KeepAwakeTray.Managers
 {
     public class SettingsManager : ISettingsManager
     {

@@ -1,5 +1,6 @@
 ﻿using Hardcodet.Wpf.TaskbarNotification;
 using KeepAwakeTray.Interfaces;
+using KeepAwakeTray.Managers;
 using System;
 using System.Reflection;
 using System.Threading;

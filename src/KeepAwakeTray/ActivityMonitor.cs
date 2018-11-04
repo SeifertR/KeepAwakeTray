@@ -41,8 +41,8 @@ namespace KeepAwakeTray
 
         private Timer activityTimer;
 
-        public bool IsActive { get; private set; }
-        
+        public bool IsActive { get; private set; } = true;
+
 
         public ActivityMonitor(ISettingsManager settingsManager)
         {
@@ -60,7 +60,12 @@ namespace KeepAwakeTray
             // the shift key to reset the idle time.
             //
             if (GetLastInputTime() > settings.InactivityInterval)
+            {
                 keybd_event(VK_SHIFT, 0, KEYEVENTF_KEYUP, 0);
+                Debug.WriteLine(DateTime.Now.ToString("mm:ss") + " Fired");
+            }
+            else
+                Debug.WriteLine(DateTime.Now.ToString("mm:ss") + " Not fired");
         }
 
         private static uint GetLastInputTime()
@@ -83,13 +88,13 @@ namespace KeepAwakeTray
 
         public void Activate()
         {
-            Debug.WriteLine("Activity monitor activated");
+            activityTimer.Start();
             IsActive = true;
         }
 
         public void Deactivate()
         {
-            Debug.WriteLine("Activity monitor deactivated");
+            activityTimer.Stop();
             IsActive = false;
         }
 
