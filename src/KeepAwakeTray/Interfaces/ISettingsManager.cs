@@ -12,5 +12,8 @@
         /// the activity key is sent
         /// </summary>
         int InactivityInterval { get; set; }
+
+        void SaveSettings(int inactivityCheckInterval, int inactivityInterval);
+        void ResetSettingsToDefault();
     }
 }
