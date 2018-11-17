@@ -1,17 +1,19 @@
-﻿using KeepAwakeTray.Interfaces;
+﻿using GalaSoft.MvvmLight;
+using KeepAwakeTray.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.IO;
 
 namespace KeepAwakeTray.Managers
 {
-    public class SettingsManager : ISettingsManager
+    public class SettingsManager : ViewModelBase, ISettingsManager
     {
         private const int InactivityCheckIntervalDefault = 30;
         private const int InactivityIntervalDefault = 180;
 
         private readonly Settings settings = new Settings();
 
+        private readonly string settingsPath;
         private readonly string fileName;
 
         public int InactivityCheckInterval
@@ -28,9 +30,8 @@ namespace KeepAwakeTray.Managers
 
         public SettingsManager()
         {
-            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "KeepAwakeTray");
-            Directory.CreateDirectory(path);
-            fileName = Path.Combine(path, "settings.json");
+            settingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "KeepAwakeTray");
+            fileName = Path.Combine(settingsPath, "settings.json");
 
             if (File.Exists(fileName))
             {
@@ -53,6 +54,7 @@ namespace KeepAwakeTray.Managers
 
         public void SaveSettings(int inactivityCheckInterval, int inactivityInterval)
         {
+            Directory.CreateDirectory(settingsPath);
             InactivityCheckInterval = inactivityCheckInterval;
             InactivityInterval = inactivityInterval;
             var json = JsonConvert.SerializeObject(this, Formatting.Indented);
