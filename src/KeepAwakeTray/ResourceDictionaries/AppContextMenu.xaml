@@ -68,7 +68,7 @@
             </MenuItem.Icon>
         </MenuItem>
 
-        <MenuItem Header="Settings" Command="{Binding ShowSettingsCommand}">
+        <MenuItem Header="SettingsModel" Command="{Binding ShowSettingsCommand}">
             <MenuItem.Icon>
                 <Image Width="16" Height="16" Source="../Images/settings.png"/>
             </MenuItem.Icon>

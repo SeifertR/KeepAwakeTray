@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using KeepAwakeTray.Interfaces;
+using KeepAwakeTray.Models;
 using Newtonsoft.Json;
 using System;
 using System.IO;
@@ -11,21 +12,21 @@ namespace KeepAwakeTray.Managers
         private const int InactivityCheckIntervalDefault = 30;
         private const int InactivityIntervalDefault = 180;
 
-        private readonly Settings settings = new Settings();
+        private readonly SettingsModel settingsModel = new SettingsModel();
 
         private readonly string settingsPath;
         private readonly string fileName;
 
         public int InactivityCheckInterval
         {
-            get => settings.InactivityCheckInterval;
-            set => settings.InactivityCheckInterval = value > 0 ? value : 1;
+            get => settingsModel.InactivityCheckInterval;
+            set => settingsModel.InactivityCheckInterval = value > 0 ? value : 1;
         }
 
         public int InactivityInterval
         {
-            get => settings.InactivityInterval;
-            set => settings.InactivityInterval = value > 0 ? value : 1;
+            get => settingsModel.InactivityInterval;
+            set => settingsModel.InactivityInterval = value > 0 ? value : 1;
         }
 
         public SettingsManager()
@@ -40,7 +41,7 @@ namespace KeepAwakeTray.Managers
                     using (var file = File.OpenText(fileName))
                     {
                         var ser = new JsonSerializer();
-                        settings = (Settings)ser.Deserialize(file, typeof(Settings));
+                        settingsModel = (SettingsModel)ser.Deserialize(file, typeof(SettingsModel));
                     }
                 }
                 catch
