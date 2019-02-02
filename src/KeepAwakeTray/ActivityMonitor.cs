@@ -55,6 +55,7 @@ namespace KeepAwakeTray
 
         private void ActivityTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
+            activityTimer.Enabled = false;
             //
             // If we've been idle for more than settings.InactivityInterval seconds, simulate pressing
             // the shift key to reset the idle time.
@@ -66,6 +67,9 @@ namespace KeepAwakeTray
             }
             else
                 Debug.WriteLine(DateTime.Now.ToString("mm:ss") + " Not fired");
+
+            activityTimer.Interval = settings.InactivityCheckInterval * 1000;
+            activityTimer.Enabled = true;
         }
 
         private static uint GetLastInputTime()

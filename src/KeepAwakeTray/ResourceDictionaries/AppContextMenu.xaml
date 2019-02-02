@@ -28,6 +28,15 @@
                       Offset="1" />
     </LinearGradientBrush>
 
+    <LinearGradientBrush x:Key="MenuBackground4"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="White"
+                      Offset="0" />
+        <GradientStop Color="AliceBlue"
+                      Offset="1" />
+    </LinearGradientBrush>
+
 
     <Style TargetType="{x:Type ContextMenu}">
         <Setter Property="BorderThickness"
@@ -36,7 +45,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContextMenu}">
                     <Grid>
-                        <Border Background="{DynamicResource MenuBackground3}"
+                        <Border Background="{DynamicResource MenuBackground4}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}">
                             <ScrollViewer
