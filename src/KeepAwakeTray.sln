@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2041
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepAwakeTray", "KeepAwakeTray\KeepAwakeTray.csproj", "{C9F3A394-AB30-4ED8-83C7-6B5399C7639D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepAwakeTray6", "KeepAwakeTray6\KeepAwakeTray6.csproj", "{50EB74BA-4582-4972-9F77-FFC9577D5E6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C9F3A394-AB30-4ED8-83C7-6B5399C7639D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9F3A394-AB30-4ED8-83C7-6B5399C7639D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9F3A394-AB30-4ED8-83C7-6B5399C7639D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EB74BA-4582-4972-9F77-FFC9577D5E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EB74BA-4582-4972-9F77-FFC9577D5E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EB74BA-4582-4972-9F77-FFC9577D5E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EB74BA-4582-4972-9F77-FFC9577D5E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>coffee-cup-green.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="coffee-cup-green.ico" />
+    <None Remove="Images\coffee-cup-blue.ico" />
+    <None Remove="Images\coffee-cup-blue.png" />
+    <None Remove="Images\coffee-cup-green.ico" />
+    <None Remove="Images\coffee-cup-green.png" />
+    <None Remove="Images\coffee-cup-red.ico" />
+    <None Remove="Images\coffee-cup-red.png" />
+    <None Remove="Images\coffee-cup-yellow.ico" />
+    <None Remove="Images\coffee-cup-yellow.png" />
+    <None Remove="Images\settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="coffee-cup-green.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="coffee-cup-green.ico" />
+    <Resource Include="Images\coffee-cup-blue.ico" />
+    <Resource Include="Images\coffee-cup-blue.png" />
+    <Resource Include="Images\coffee-cup-green.ico" />
+    <Resource Include="Images\coffee-cup-green.png" />
+    <Resource Include="Images\coffee-cup-red.ico" />
+    <Resource Include="Images\coffee-cup-red.png" />
+    <Resource Include="Images\coffee-cup-yellow.ico" />
+    <Resource Include="Images\coffee-cup-yellow.png" />
+    <Resource Include="Images\settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\SettingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
