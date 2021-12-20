@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using Microsoft.Toolkit.Mvvm.Input;
 
 namespace KeepAwakeTray6.Interfaces
 {

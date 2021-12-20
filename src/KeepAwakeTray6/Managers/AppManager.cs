@@ -1,10 +1,10 @@
-﻿using System;
-using System.Windows;
+﻿using KeepAwakeTray6.Interfaces;
 using KeepAwakeTray6.ViewModels;
 using KeepAwakeTray6.Views;
-using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-using KeepAwakeTray6.Interfaces;
+using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
+using System;
+using System.Windows;
 
 namespace KeepAwakeTray6.Managers
 {

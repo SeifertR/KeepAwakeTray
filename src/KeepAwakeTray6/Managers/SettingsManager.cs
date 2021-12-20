@@ -1,6 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using KeepAwakeTray6.Interfaces;
+﻿using KeepAwakeTray6.Interfaces;
 using KeepAwakeTray6.Models;
+using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 using System;
 using System.IO;

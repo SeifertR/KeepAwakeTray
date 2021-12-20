@@ -16,9 +16,9 @@ namespace KeepAwakeTray6
     {
         private IServiceProvider serviceProvider;
 
-        private Mutex singleInstanceMutex;
-        private TaskbarIcon notifyIcon;
-        private IAppManager appManager;
+        private Mutex? singleInstanceMutex;
+        private TaskbarIcon? notifyIcon;
+        private IAppManager? appManager;
 
         public App()
         {
@@ -55,7 +55,8 @@ namespace KeepAwakeTray6
 
         protected override void OnExit(ExitEventArgs e)
         {
-            notifyIcon.Dispose();
+            notifyIcon?.Dispose();
+            singleInstanceMutex?.Dispose();
             base.OnExit(e);
         }
     }
